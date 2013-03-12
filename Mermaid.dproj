@@ -1,0 +1,193 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F1EB88F4-38F1-4CAA-856E-3732CE020175}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>Mermaid.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Release</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;dbrtl;bdertl;rtl;vclactnband;vcldb;vcldbx;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;intrawebdb_100_120;Intraweb_100_120;VclSmp;vclie;websnap;webdsnap;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DataSnapServer;DBXSybaseASADriver;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DbxClientDriver;DBXSybaseASEDriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver</DCC_UsePackage>
+			<DCC_DependencyCheckOutputName>Mermaid.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Mermaid.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="MainForm.pas">
+				<Form>FormMain</Form>
+			</DCCReference>
+			<DCCReference Include="DataModule.pas"/>
+			<DCCReference Include="OrderForm.pas">
+				<Form>FormOrder</Form>
+			</DCCReference>
+			<DCCReference Include="CheckoutForm.pas">
+				<Form>FormCheckout</Form>
+			</DCCReference>
+			<DCCReference Include="LoginForm.pas">
+				<Form>FormLogin</Form>
+			</DCCReference>
+			<DCCReference Include="FunctionForm.pas">
+				<Form>FormFunction</Form>
+			</DCCReference>
+			<DCCReference Include="ReportForm.pas">
+				<Form>FormReport</Form>
+			</DCCReference>
+			<DCCReference Include="BillForm.pas">
+				<Form>FormBill</Form>
+			</DCCReference>
+			<DCCReference Include="ConfigForm.pas">
+				<Form>FormConfig</Form>
+			</DCCReference>
+			<DCCReference Include="MenuReportForm.pas">
+				<Form>FormMenuReport</Form>
+			</DCCReference>
+			<DCCReference Include="DailyReportForm.pas">
+				<Form>FormDailyReport</Form>
+			</DCCReference>
+			<DCCReference Include="NewTableNameForm.pas">
+				<Form>FormNewTableName</Form>
+			</DCCReference>
+			<DCCReference Include="NewOrderForm.pas">
+				<Form>FormNewOrder</Form>
+			</DCCReference>
+			<DCCReference Include="ChangeTableForm.pas">
+				<Form>FormChangeTable</Form>
+			</DCCReference>
+			<DCCReference Include="MonthSalesReportForm.pas">
+				<Form>FormMonthSalesReport</Form>
+			</DCCReference>
+			<DCCReference Include="DailyOrderReportForm.pas">
+				<Form>FormDailyOrderReport</Form>
+			</DCCReference>
+			<DCCReference Include="CookingForm.pas">
+				<Form>FormCooking</Form>
+			</DCCReference>
+			<DCCReference Include="NumKeyboardForm.pas">
+				<Form>FormNumKeyboard</Form>
+			</DCCReference>
+			<DCCReference Include="KeyboardForm.pas">
+				<Form>FormKeyboard</Form>
+			</DCCReference>
+			<DCCReference Include="BaseDialog.pas">
+				<Form>FormBaseDialog</Form>
+			</DCCReference>
+			<DCCReference Include="DiscountDialogForm.pas">
+				<Form>FormDiscountDialog</Form>
+			</DCCReference>
+			<DCCReference Include="DelConfirmForm.pas">
+				<Form>FormDelConfirm</Form>
+			</DCCReference>
+			<DCCReference Include="EraserConfirmForm.pas">
+				<Form>FormEraserConfirm</Form>
+			</DCCReference>
+			<DCCReference Include="DailyFoodItemForm.pas">
+				<Form>FormDailyFoodItem</Form>
+			</DCCReference>
+			<DCCReference Include="MonthOrderReportForm.pas">
+				<Form>FormMonthOrderReport</Form>
+			</DCCReference>
+			<DCCReference Include="MonthUnItemReportForm.pas">
+				<Form>FormMonthUnItemReport</Form>
+			</DCCReference>
+			<DCCReference Include="ContractOutForm.pas">
+				<Form>FormContractOut</Form>
+			</DCCReference>
+			<DCCReference Include="ContractOutReportForm.pas">
+				<Form>FormContractOutReport</Form>
+			</DCCReference>
+			<DCCReference Include="PosUtils.pas"/>
+			<DCCReference Include="DelDebtConfirmForm.pas">
+				<Form>FormDelDebtConfirm</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">Mermaid.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">27</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">256</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1028</VersionInfo>
+						<VersionInfo Name="CodePage">950</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">JackDoIt</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.27.0.256</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">Mermaid</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename">Mermaid</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">古都點菜系統</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.27.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages/>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

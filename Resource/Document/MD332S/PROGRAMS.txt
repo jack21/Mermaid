@@ -1,0 +1,50 @@
+
+//DELPHI CLEVER (由LPT1輸出)
+VAR TF:TESTFILE;
+BEGIN
+ AssignFile(TF,'COM1');
+ REWRITE(TF);
+ WRITELN(TF,'指令或字串');
+ CloseFile(TF);
+END;
+
+'使用 Visual Basic 5.0 中文企業版
+Option Explicit
+
+Private Sub Command1_Click()
+Dim HAND As Long, I As Integer
+Dim SS(1 To 9) As String
+HAND = FreeFile
+SS(1) = "12345678901234567890"
+SS(2) = "ABCDEFGHIJKLMNOPQRST"
+SS(3) = "中華民國八十八年七月"
+SS(4) = "一二三四五六七八九十"
+SS(5) = "~!@#%^&*()_+|\=-[];'"
+SS(6) = "12345678901234567890"
+SS(7) = "中華民國八十八年七月"
+SS(8) = "一二三四五六七八九十"
+SS(9) = "ABCDEFGHIJKLMNOPQRST"
+Open "LPT1" For Output As #HAND
+For I = 1 To 9
+    Print #HAND, SS(I)
+Next
+Print #HAND, Chr(12)
+Close #HAND
+End Sub
+
+Private Sub Command2_Click()
+Printer.Print "1.上頁合計金額:         1000"
+Printer.Print "2.上頁合計金額:         2000"
+Printer.Print "3.上頁合計金額:         3000"
+Printer.Print "4.上頁合計金額:         4000"
+Printer.Print "5.上頁合計金額:         5000"
+Printer.Print "6.上頁合計金額:         6000"
+Printer.Print "7.上頁合計金額:         7000"
+Printer.Print "8.上頁合計金額:         8000"
+Printer.Print "9.上頁合計金額:         9000"
+Printer.EndDoc
+End Sub
+
+Private Sub Command3_Click()
+Unload Me
+End Sub

@@ -1,0 +1,102 @@
+object FormNewTableName: TFormNewTableName
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = #26700#34399
+  ClientHeight = 218
+  ClientWidth = 344
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 19
+  object Label1: TLabel
+    Left = 16
+    Top = 16
+    Width = 38
+    Height = 19
+    Caption = #26700#21517':'
+  end
+  object OrgTableNameLabel: TLabel
+    Left = 76
+    Top = 16
+    Width = 125
+    Height = 19
+    AutoSize = False
+    Caption = #21407#26412#26700#21517
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 56
+    Width = 54
+    Height = 19
+    Caption = #26032#26700#21517':'
+  end
+  object ErrorLabel: TLabel
+    Left = 216
+    Top = 56
+    Width = 112
+    Height = 19
+    Caption = #26032#26700#21517#19981#24471#28858#31354
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object NewTableNameEdit: TEdit
+    Left = 76
+    Top = 53
+    Width = 121
+    Height = 27
+    TabOrder = 0
+  end
+  object OKButton: TButton
+    Left = 144
+    Top = 128
+    Width = 83
+    Height = 65
+    Caption = #30906#23450
+    ImageIndex = 0
+    Images = DM.ImageList
+    ModalResult = 1
+    TabOrder = 1
+    OnClick = OKButtonClick
+  end
+  object CancelButton: TButton
+    Left = 248
+    Top = 128
+    Width = 83
+    Height = 65
+    Caption = #21462#28040
+    ImageIndex = 1
+    Images = DM.ImageList
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object DelButton: TButton
+    Left = 8
+    Top = 128
+    Width = 83
+    Height = 65
+    Caption = #21034#38500
+    ImageIndex = 3
+    Images = DM.ImageList
+    ModalResult = 3
+    TabOrder = 3
+  end
+end

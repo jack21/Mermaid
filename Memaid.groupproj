@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{44393A1A-07A7-4E91-B4AF-930CF5220061}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Mermaid.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PurgeDB\PurgeDB.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Mermaid">
+			<MSBuild Projects="Mermaid.dproj"/>
+		</Target>
+		<Target Name="Mermaid:Clean">
+			<MSBuild Targets="Clean" Projects="Mermaid.dproj"/>
+		</Target>
+		<Target Name="Mermaid:Make">
+			<MSBuild Targets="Make" Projects="Mermaid.dproj"/>
+		</Target>
+		<Target Name="PurgeDB">
+			<MSBuild Projects="PurgeDB\PurgeDB.dproj"/>
+		</Target>
+		<Target Name="PurgeDB:Clean">
+			<MSBuild Targets="Clean" Projects="PurgeDB\PurgeDB.dproj"/>
+		</Target>
+		<Target Name="PurgeDB:Make">
+			<MSBuild Targets="Make" Projects="PurgeDB\PurgeDB.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Mermaid;PurgeDB"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Mermaid:Clean;PurgeDB:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Mermaid:Make;PurgeDB:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
